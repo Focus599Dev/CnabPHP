@@ -32,7 +32,7 @@ use Exception;
 class Registro3P extends Generico3
 {
 	protected $meta = [
-		'codigo_banco'=> [          // 1.3P
+		'codigo_banco'=> [
 			'tamanho'=>3,
 			'default'=>'033',
 			'tipo'=>'int',
@@ -89,222 +89,222 @@ class Registro3P extends Generico3
 			'tipo'=>'alfa',
 			'required'=>true
         ],
-		'conta'=> [       //10.3P
+		'conta'=> [
 			'tamanho'=>9,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'conta_dv'=> [               // 11.3P
+		'conta_dv'=> [
 			'tamanho'=>1,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'conta_cobranca'=> [               //12.3P
+		'conta_cobranca'=> [
 			'tamanho'=>9,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'conta_cobranca_dv'=>[      //13.3P
+		'conta_cobranca_dv'=>[
 			'tamanho'=>1,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-        'filler2'=>[  //13.3P
+        'filler2'=>[
             'tamanho'=>2,
             'default'=>' ',
             'tipo'=>'alfa',
             'required'=>true
         ],
-		'nosso_numero'=> [  //13.3P
+		'nosso_numero'=> [
 			'tamanho'=>13,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'codigo_carteira'=> [   //14.3P
+		'codigo_carteira'=> [
 			'tamanho'=>1,
 			'default'=>'1', // Cobrança simples (Sem registro e Eletrônica com Registro)
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'forma_cadastramento' => [      //15.3P
+		'forma_cadastramento' => [
 			'tamanho'=>1,
 			'default'=>'1',  // combrança com registro
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'tipo_documento'=> [        //16.3P
+		'tipo_documento'=> [
 			'tamanho'=>1,
 			'default'=>'2',
 			'tipo'=>'int',
 			'required'=>true
         ],
-        'filler3'=> [               //19.3P
+        'filler3'=> [
             'tamanho'=>1,
             'default'=>' ',
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'filler4'=> [               //19.3P
+        'filler4'=> [
             'tamanho'=>1,
             'default'=>' ',
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'seu_numero'=> [            //19.3P   Campo de preenchimento obrigatório; preencher com Seu Número de controle do título
+        'seu_numero'=> [
             'tamanho'=>15,
             'default'=>' ',      // este espaço foi colocado para passa a validação para os seters do Generico
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'data_vencimento'=> [            //20.3
+        'data_vencimento'=> [
             'tamanho'=>8,
             'default'=>'',
             'tipo'=>'date',
             'required'=>true
         ],
-        'valor'=> [           //21.3P
+        'valor'=> [
             'tamanho'=>13,
             'default'=>'',
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true
         ],
-        'agencia_cobradora'=> [    //22.3P
+        'agencia_cobradora'=> [
             'tamanho'=>4,
             'default'=>'',
             'tipo'=>'int',
             'required'=>true
         ],
-        'agencia_cobradora_dv'=> [    //23.3P
+        'agencia_cobradora_dv'=> [
             'tamanho'=>1,
             'default'=>'',
             'tipo'=>'int',
             'required'=>true
         ],
-        'filler5'=> [               //19.3P
+        'filler5'=> [
             'tamanho'=>1,
             'default'=>' ',
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'especie_titulo'=> [    //24.3P
+        'especie_titulo'=> [
             'tamanho'=>2,
             'default'=>'2',
             'tipo'=>'int',
             'required'=>true
         ],
-        'aceite'=> [           //25.3P
+        'aceite'=> [
             'tamanho'=>1,
             'default'=>'N',
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'data_emissao'=> [            //26.3P
+        'data_emissao'=> [
             'tamanho'=>8,
             'default'=>'',
             'tipo'=>'date',
             'required'=>true
         ],
-        'codigo_juros'=> [            //27.3P
+        'codigo_juros'=> [
             'tamanho'=>1,
             'default'=>'1', // 1 = Valor por dia
             'tipo'=>'int',
             'required'=>true
         ],
-        'data_juros'=> [            //28.3P
+        'data_juros'=> [
             'tamanho'=>8,
             'default'=>'0',
             'tipo'=>'date',
             'required'=>true
         ],
-        'vlr_juros'=> [            //29.3P
+        'vlr_juros'=> [
             'tamanho'=>13,
             'default'=>'0',
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true
         ],
-        'codigo_desconto'=> [            //30.3P
+        'codigo_desconto'=> [
             'tamanho'=>1,
             'default'=>'0',
             'tipo'=>'int',
             'required'=>true
         ],
-        'data_desconto'=> [            //31.3P
+        'data_desconto'=> [
             'tamanho'=>8,
             'default'=>'0',
             'tipo'=>'date',
             'required'=>true
         ],
-        'vlr_desconto'=> [            //32.3P
+        'vlr_desconto'=> [
             'tamanho'=>13,
             'default'=>'0',
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true
         ],
-        'vlr_IOF'=> [            //33.3P
+        'vlr_IOF'=> [
             'tamanho'=>13,
             'default'=>'0',
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true
         ],
-        'vlr_abatimento'=> [            //34.3P
+        'vlr_abatimento'=> [
             'tamanho'=>13,
             'default'=>'0',
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true
         ],
-        'seu_numero2'=> [            //35.3P
+        'seu_numero2'=> [
             'tamanho'=>25,
             'default'=>' ',
             'tipo'=>'alfa',
             'required'=>true
         ],
-        'protestar'=> [            //36.3P
+        'protestar'=> [
             'tamanho'=>1,
             'default'=>'0', // 0 = NÃO PROTESTAR
             'tipo'=>'int',
             'required'=>true
         ],
-        'prazo_protesto'=> [            //37.3P
+        'prazo_protesto'=> [
             'tamanho'=>2,
             'default'=>'0',
             'tipo'=>'int',
             'required'=>true
         ],
-        'baixar'=> [            //38.3P
+        'baixar'=> [
             'tamanho'=>1,
             'default'=>'2', // 2 = NAO BAIXAR / NAO DEVOLVER
             'tipo'=>'int',
             'required'=>true
         ],
-        'filler6'=> [            //41.3P
+        'filler6'=> [
             'tamanho'=>1,
             'default'=>'0',
             'tipo'=>'int',
             'required'=>true
         ],
-        'prazo_baixar'=> [            //39.3P
+        'prazo_baixar'=> [
             'tamanho'=>2,
             'default'=>'00',
             'tipo'=>'int',
             'required'=>true
         ],
-        'codigo_moeda'=> [            //40.3P
+        'codigo_moeda'=> [
             'tamanho'=>2,
             'default'=>'0',
             'tipo'=>'int',
             'required'=>true
         ],
-        'filler7'=> [            //42.3P
+        'filler7'=> [
             'tamanho'=>11,
             'default'=>' ',
             'tipo'=>'alfa',
@@ -314,48 +314,85 @@ class Registro3P extends Generico3
 
 	public function __construct($data = null)
 	{
-		if(empty($this->data))parent::__construct($data);
+		if (empty($this->data)) {
+		    parent::__construct($data);
+        }
+
 		$this->inserirDetalhe($data);
 	}
 
 	public function inserirDetalhe($data)
 	{
+	    //SEGMENTOS OBRIGATÓRIOS (P, Q)
 		$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3Q';
 		$this->children[] = new $class($data);
-		if( isset($data['codigo_desconto2']) ||
-		isset($data['codigo_desconto3']) ||
-		isset($data['codigo_multa']) ||
-		isset($data['mensagem']) ||
-		isset($data['email_pagador']))
-		{
+
+		//SEGMENTOS OPCIONAIS (R, S)
+		if( isset($data['codigo_desconto2']) || isset($data['codigo_multa']) || isset($data['mensagem'])) {
 			$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3R';
 			$this->children[] = new $class($data);
 		}
-		if($data['emissao_boleto']==1)
-		{
-			if(isset($data['mensagem_frente']))
-			{
-				$data['mensagem_140'] = $data['mensagem_frente'];
-				$data['tipo_impressao'] = 1;
-				$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S1e2';
-				$this->children[] = new $class($data);
-			}
-			if(isset($data['mensagem_verso']))
-			{
-				$data['mensagem_140'] = $data['mensagem_verso'];
-				$data['tipo_impressao'] = 2;
-				$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S1e2';
-				$this->children[] = new $class($data);
-			}
-			if(isset($data['mensagem']))
-			{
-				if(count(explode(PHP_EOL,$data['mensagem']))>4){
-					$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S3';
-					$this->children[] = new $class($data);
-				}
-			}
-		}
+
+		if (!isset($data['tipo_impressao'])) {
+		    return;
+        }
+
+        if($data['tipo_impressa'] == 1) {
+            $class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S1';
+            $this->children[] = new $class($data);
+
+        } else if ($data['tipo_impressa'] == 2) {
+            $class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S2';
+            $this->children[] = new $class($data);
+        }
 	}
+
+    /**
+     * @param $value
+     */
+    protected function set_nosso_numero($value)
+    {
+        $dv = $this->modulo11($value);
+        $this->data['nosso_numero'] = $value . $dv;
+    }
+
+    /**
+     * @param $num
+     * @param int $base
+     * @return int
+     */
+    public function modulo11($num, $base = 9)
+    {
+        $soma = 0;
+        $fator = 2;
+
+        /* Separacao dos numeros */
+        for ($i = strlen($num); $i > 0; $i--) {
+            // pega cada numero isoladamente
+            $numeros[$i] = substr($num, $i - 1, 1);
+            // Efetua multiplicacao do numero pelo falor
+            $parcial[$i] = $numeros[$i] * $fator;
+            // Soma dos digitos
+            $soma += $parcial[$i];
+            if ($fator == $base) {
+                // restaura fator de multiplicacao para 2
+                $fator = 2;
+            }
+            $fator++;
+        }
+
+        /* Calculo do modulo 11 */
+        $resto = $soma % 11;
+        if ($resto == 10) {
+            $dv = 1;
+        } else if ($resto == 0 || $resto == 1 ) {
+            $dv = 0;
+        } else {
+            $dv = 11 - $resto;
+        }
+
+        return $dv;
+    }
 }
 
 ?>

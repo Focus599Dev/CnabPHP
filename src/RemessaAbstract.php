@@ -16,6 +16,7 @@ abstract class RemessaAbstract
         '237' => 'Bradesco',
         '341' => 'Itau',
         '756' => 'Sicoob',
+        '033' => 'Santander'
     ];
     /**
      * @var string
