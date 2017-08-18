@@ -55,7 +55,7 @@ class Registro3R extends Generico3
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'seguimento'=> [
+		'segmento'=> [
 			'tamanho'=>1,
 			'default'=>'R',
 			'tipo'=>'alfa',

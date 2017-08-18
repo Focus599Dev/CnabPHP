@@ -55,13 +55,13 @@ class Registro0 extends Generico0
 			'tipo' => 'alfa',
 			'required' => true
         ],
-		'tipo_inscricao' => [
+		'tipo_inscricao_empresa' => [
 			'tamanho' => 1,
 			'default' => '',
 			'tipo' => 'int',
 			'required' => true
         ],
-		'numero_inscricao' => [
+		'numero_inscricao_empresa' => [
 			'tamanho' => 15,
 			'default' => '',
 			'tipo' => 'int',

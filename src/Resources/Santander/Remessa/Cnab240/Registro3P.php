@@ -56,7 +56,7 @@ class Registro3P extends Generico3
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'seguimento'=> [            // 5.3P
+		'segmento'=> [            // 5.3P
 			'tamanho'=>1,
 			'default'=>'P',
 			'tipo'=>'alfa',
@@ -337,11 +337,11 @@ class Registro3P extends Generico3
 		    return;
         }
 
-        if($data['tipo_impressa'] == 1) {
+        if($data['tipo_impressao'] == 1) {
             $class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S1';
             $this->children[] = new $class($data);
 
-        } else if ($data['tipo_impressa'] == 2) {
+        } else if ($data['tipo_impressao'] == 2) {
             $class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3S2';
             $this->children[] = new $class($data);
         }

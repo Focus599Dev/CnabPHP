@@ -54,7 +54,7 @@ class Registro3Q extends Generico3
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'seguimento'=> [
+		'segmento'=> [
 			'tamanho'=>1,
 			'default'=>'Q',
 			'tipo'=>'alfa',
@@ -75,13 +75,13 @@ class Registro3Q extends Generico3
 
 			// - ------------------ até aqui é igual para todo registro tipo 3
 
-		'tipo_inscricao'=> [
+		'tipo_inscricao_pagador'=> [
 			'tamanho'=>1,
 			'default'=>'',
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'numero_inscricao'=> [
+		'numero_inscricao_pagador'=> [
 			'tamanho'=>15,
 			'default'=>'',
 			'tipo'=>'int',
@@ -111,7 +111,7 @@ class Registro3Q extends Generico3
 			'tipo'=>'int',
 			'required'=>true
         ],
-		'cep_sufixo'=> [
+		'sufixo_cep_pagador'=> [
 			'tamanho'=>3,
 			'default'=>' ',
 			'tipo'=>'int',
