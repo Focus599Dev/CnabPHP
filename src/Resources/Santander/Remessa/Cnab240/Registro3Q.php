@@ -171,7 +171,7 @@ class Registro3Q extends Generico3
             'tipo'=>'int',
             'required'=>true
         ],
-		'filler4'=> [
+		'filler2'=> [
 			'tamanho'=>19,
 			'default'=>' ',
 			'tipo'=>'alfa',

@@ -75,7 +75,7 @@ class Registro0 extends Generico0
         ],
         'filler2' => [
 			'tamanho' => 25,
-			'default' => '',
+			'default' => ' ',
 			'tipo' => 'alfa',
 			'required' => true
         ],

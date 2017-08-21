@@ -55,15 +55,16 @@ class Generico3 extends RegistroRemessaAbstract
 	}
 	protected function set_agencia($value)
 	{
-		$this->data['agencia'] = RemessaAbstract::$dados['agencia'];
+		$this->data['agencia'] = $value == '' ? RemessaAbstract::$dados['agencia'] : $value;
 	}
 	protected function set_agencia_dv($value)
 	{
-		$this->data['agencia_dv'] = RemessaAbstract::$dados['agencia_dv'];
+	    $default = isset(RemessaAbstract::$dados['agencia_dv']) ? RemessaAbstract::$dados['agencia_dv'] : '';
+		$this->data['agencia_dv'] = $value == '' ? $default : $value;
 	}
 	protected function set_codigo_convenio($value)
 	{
-		$this->data['codigo_convenio'] = RemessaAbstract::$dados['codigo_beneficiario'];
+		$this->data['codigo_convenio'] = $value == '' ? RemessaAbstract::$dados['codigo_convenio'] : $value;
 	}
 	protected function set_com_registro($value)
 	{
