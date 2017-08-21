@@ -356,41 +356,6 @@ class Registro3P extends Generico3
         $this->data['nosso_numero'] = $value . $dv;
     }
 
-    protected function set_mensagem_3($value)
-    {
-        $this->data['mensagem_3'] = $value;
-    }
-
-    protected function set_mensagem_4($value)
-    {
-        $this->data['mensagem_4'] = $value;
-    }
-
-    protected function set_mensagem_5($value)
-    {
-        $this->data['mensagem_5'] = $value;
-    }
-
-    protected function set_mensagem_6($value)
-    {
-        $this->data['mensagem_6'] = $value;
-    }
-
-    protected function set_mensagem_7($value)
-    {
-        $this->data['mensagem_7'] = $value;
-    }
-
-    protected function set_mensagem_8($value)
-    {
-        $this->data['mensagem_8'] = $value;
-    }
-
-    protected function set_mensagem_9($value)
-    {
-        $this->data['mensagem_9'] = $value;
-    }
-
     /**
      * @param $num
      * @param int $base

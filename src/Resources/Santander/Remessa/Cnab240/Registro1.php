@@ -84,7 +84,7 @@ class Registro1 extends Generico1
             'required' => true
         ],
         'tipo_inscricao_empresa' => [
-            'tamanho' => 2,
+            'tamanho' => 1,
             'default' => '',
             'tipo' => 'int',
             'required' => true

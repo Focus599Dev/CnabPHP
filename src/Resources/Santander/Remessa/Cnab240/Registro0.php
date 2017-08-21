@@ -126,7 +126,13 @@ class Registro0 extends Generico0
 			'default'=>'040',
 			'tipo'=>'int',
 			'required'=>true
-        ]
+        ],
+        'filler5'=> [
+            'tamanho'=>74,
+            'default'=>' ',
+            'tipo'=>'alfa',
+            'required'=>true
+        ],
     ];
 }
 ?>
