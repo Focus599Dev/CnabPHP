@@ -82,12 +82,12 @@ class Registro1 extends Generico1
             'tamanho'=>1,
             'default'=>'',
             'tipo'=>'int','required'=>true),
-        'conta_corrente'=>array(
+        'conta'=>array(
             'tamanho'=>9,
             'default'=>'',
             'tipo'=>'int',
             'required'=>true),
-        'conta_corrente_dv'=>array(
+        'conta_dv'=>array(
             'tamanho'=>1,
             'default'=>'',
             'tipo'=>'int',

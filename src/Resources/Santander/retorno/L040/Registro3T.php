@@ -47,6 +47,9 @@ class Registro3T extends Generico3
             'default'=>'',
             'tipo'=>'alfa',
             'required'=>true),
+
+        // - ------------------ até aqui é igual para os registros tipo 3
+
         'agencia'=>array(
             'tamanho'=>4,
             'default'=>'',
