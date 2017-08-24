@@ -40,7 +40,7 @@ class Registro3P extends Generico3
         ],
 		'codigo_lote'=> [           // 2.3P
 			'tamanho'=>4,
-			'default'=>1,
+			'default'=>'1',
 			'tipo'=>'int',
 			'required'=>true
         ],

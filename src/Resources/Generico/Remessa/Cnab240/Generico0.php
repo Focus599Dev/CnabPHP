@@ -61,6 +61,11 @@ class Generico0 extends RegistroRemessaAbstract
         $this->data['numero_inscricao'] = str_ireplace(array('.', '/', '-'), array(''), $value);
     }
 
+    protected function set_numero_inscricao_empresa($value)
+    {
+        $this->data['numero_inscricao_empresa'] = str_ireplace(array('.', '/', '-'), array(''), $value);
+    }
+
     public function get_numero_registro()
     {
         return null;

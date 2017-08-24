@@ -33,7 +33,7 @@ class Generico3 extends RegistroRemessaAbstract
 {
 	protected function set_codigo_lote($value)
 	{
-		//ArquivoAbstract::$loteCounter++; 
+		//ArquivoAbstract::$loteCounter++;
 		$this->data['codigo_lote'] = RemessaAbstract::$loteContador;
 	}
 	protected function set_numero_registro($value)
@@ -49,6 +49,10 @@ class Generico3 extends RegistroRemessaAbstract
 	{
 		$this->data['numero_inscricao'] = str_ireplace(array('.','/','-'),array(''),$value);
 	}
+    protected function set_numero_inscricao_pagador($value)
+    {
+        $this->data['numero_inscricao_pagador'] = str_ireplace(array('.','/','-'),array(''),$value);
+    }
 	protected function set_codigo_beneficiario($value)
 	{
 		$this->data['codigo_beneficiario'] = RemessaAbstract::$dados['codigo_beneficiario'];

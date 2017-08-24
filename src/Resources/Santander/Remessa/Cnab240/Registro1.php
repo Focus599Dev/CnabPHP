@@ -49,7 +49,7 @@ class Registro1 extends Generico1
         ],
         'tipo_registro' => [
             'tamanho' => 1,
-            'default' => 1,
+            'default' => '1',
             'tipo' => 'int',
             'required' => true
         ],
@@ -146,7 +146,7 @@ class Registro1 extends Generico1
         'filler5' => [
             'tamanho' => 41,
             'default' => ' ',
-            'tipo' => 'int',
+            'tipo' => 'alfa',
             'required' => true
         ]
     ];

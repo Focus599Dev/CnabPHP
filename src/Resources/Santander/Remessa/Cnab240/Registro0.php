@@ -94,7 +94,7 @@ class Registro0 extends Generico0
         'filler3' => [
             'tamanho' => 10,
             'default' => ' ',
-            'tipo' => 'int',
+            'tipo' => 'alfa',
             'required' => true
         ],
 		'codigo_remessa' => [

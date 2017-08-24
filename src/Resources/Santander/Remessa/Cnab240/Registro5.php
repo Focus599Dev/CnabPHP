@@ -38,7 +38,7 @@ class Registro5 extends Generico5
         ],
 		'codigo_lote'=> [
 			'tamanho'=>4,
-			'default'=>1,
+			'default'=>'1',
 			'tipo'=>'int',
 			'required'=>true
         ],
