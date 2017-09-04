@@ -190,8 +190,25 @@ class Registro3T extends Generico3
     }
     public function inserirDetalhe($data)
     {
-        $class = 'CnabPHP\Resources\\'.RetornoAbstract::$banco.'\remessa\\'.RetornoAbstract::$layout.'\Registro3U';
-        $this->children[] = new $class($data);
         RetornoAbstract::$linesCounter++;
+        $class = 'CnabPHP\Resources\\'.RetornoAbstract::$banco.'\retorno\\'.RetornoAbstract::$layout.'\Registro3U';
+        $this->children[] = new $class(RetornoAbstract::$lines[RetornoAbstract::$linesCounter]);
+        if(substr(RetornoAbstract::$lines[RetornoAbstract::$linesCounter+1],14,1)=="Y"){
+            RetornoAbstract::$linesCounter++;
+            $class = 'CnabPHP\Resources\\'.RetornoAbstract::$banco.'\retorno\\'.RetornoAbstract::$layout.'\Registro3Y';
+            $this->children[] = new $class(RetornoAbstract::$lines[RetornoAbstract::$linesCounter]);
+        }
+    }
+    public function get_data_ocorrencia(){
+        $r3u = $this->R3U;
+        return $r3u->___get('data_ocorrencia');
+    }
+    public function get_vlr_pago(){
+        $r3u = $this->R3U;
+        return $r3u->___get('vlr_pago');
+    }
+    public function get_codigo_movimento(){
+        $r3u = $this->R3U;
+        return $r3u->codigo_movimento;
     }
 }

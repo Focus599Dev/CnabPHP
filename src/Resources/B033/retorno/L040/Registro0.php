@@ -42,6 +42,7 @@ class Registro0 extends Generico0
             'tamanho'=>15,
             'default'=>'',
             'tipo'=>'int',
+            'required'=>true),
         'agencia'=>array(
             'tamanho'=>4,
             'default'=>'',
@@ -61,7 +62,6 @@ class Registro0 extends Generico0
             'tamanho'=>1,
             'default'=>'',
             'tipo'=>'int',
-            'required'=>true),
             'required'=>true),
         'filler2'=>array(
             'tamanho'=>5,
@@ -134,7 +134,6 @@ class Registro0 extends Generico0
     {
         while(RetornoAbstract::$linesCounter < (count(RetornoAbstract::$lines)-4))
         {
-
             $class = 'CnabPHP\Resources\\'.RetornoAbstract::$banco.'\retorno\\'.RetornoAbstract::$layout.'\Registro1';
             $lote = new $class(RetornoAbstract::$lines[RetornoAbstract::$linesCounter]);
             $class = 'CnabPHP\Resources\\'.RetornoAbstract::$banco.'\retorno\\'.RetornoAbstract::$layout.'\Registro5';

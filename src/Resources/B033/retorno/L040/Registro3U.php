@@ -98,12 +98,12 @@ class Registro3U extends  Generico3
             'tipo'=>'decimal',
             'precision'=>2,
             'required'=>true),
-        'data_arquivo'=>array(
+        'data_ocorrencia'=>array(
             'tamanho'=>8,
             'default'=>'',
             'tipo'=>'date',
             'required'=>true),
-        'data_credito'=>array(
+        'data_efetivacao_credito'=>array(
             'tamanho'=>8,
             'default'=>'',
             'tipo'=>'date',
@@ -113,7 +113,7 @@ class Registro3U extends  Generico3
             'default'=>'0',
             'tipo'=>'int',
             'required'=>true),
-        'data_ocorrencia'=>array(
+        'data_ocorrencia_pagador'=>array(
             'tamanho'=>8,
             'default'=>' ',
             'tipo'=>'date',
