@@ -325,7 +325,6 @@ class Registro1 extends Generico1
         $nosso_numero = str_pad($nosso_numero, 15, '0', STR_PAD_LEFT);
 
         $this->data['nosso_numero'] = $modalidades[$emissao_boleto][$cod_carteira] . $nosso_numero;
-        die($this->data['nosso_numero']);
     }
 
     protected function set_agencia_cobradora($value)
