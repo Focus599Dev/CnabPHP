@@ -303,7 +303,7 @@ class Registro1 extends Generico1
         ]
     ];
 
-    protected function set_nosso_numero($value)
+    protected function gerar_nosso_numero($nosso_numero, $emissao_boleto, $cod_carteira)
     {
         $id_emissao_banco = '1';
         $id_emissao_beneficiario = '2';
@@ -322,9 +322,10 @@ class Registro1 extends Generico1
             ]
         ];
 
-        $nosso_numero = str_pad($value, 15, '0', STR_PAD_LEFT);
+        $nosso_numero = str_pad($nosso_numero, 15, '0', STR_PAD_LEFT);
 
-        $this->data['nosso_numero'] = $modalidades[$this->emissao_boleto][$this->cod_carteira] . $nosso_numero;
+        $this->data['nosso_numero'] = $modalidades[$emissao_boleto][$cod_carteira] . $nosso_numero;
+        die($this->data['nosso_numero']);
     }
 
     protected function set_agencia_cobradora($value)
