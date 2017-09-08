@@ -181,4 +181,10 @@ class Registro2 extends Generico2
 
         $this->data['nosso_numero'] = $modalidades[$emissao_boleto][$cod_carteira] . $nosso_numero;
     }
+    
+    protected function set_cod_carteira($value)
+    {
+        $this->data['cod_carteira'] = $value;
+        $this->gerar_nosso_numero($this->data['nosso_numero'], $this->data['emissao_boleto'], $value);
+    }
 }
