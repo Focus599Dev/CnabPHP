@@ -331,6 +331,12 @@ class Registro1 extends Generico1
     {
         $this->data['agencia_cobradora'] = $value;
     }
+    
+    protected function set_cod_carteira($value)
+    {
+        $this->data['cod_carteira'] = $value;
+        $this->gerar_nosso_numero($this->data['nosso_numero'], $this->data['emissao_boleto'], $value);
+    }
 }
 
 ?>
