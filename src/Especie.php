@@ -127,7 +127,7 @@ class Especie
         $this->res['341'] = $this->itau;
         $this->res['001'] = $this->bb;
         $this->res['756'] = $this->sicoob;
-        $this->res['033'] = $this->sicoob;
+        $this->res['033'] = $this->santander;
         
         $this->banco = $this->res[$banco];        
     } 
