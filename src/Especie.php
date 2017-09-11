@@ -32,6 +32,7 @@ class Especie
     private $caixa = array();
     private $bb = array();
     private $siccob = array();
+    private $santander = array();
     private $banco;
     
     public function __construct($banco = null){
@@ -76,7 +77,6 @@ class Especie
         $this->bb[18] = array('abr'=>"FAT",'txt'=>'Fatura');
         $this->bb[19] = array('abr'=>"ND",'txt'=>'Nota de DÃ©bito');
         
-        
         $this->itau[1] = array('abr'=>"DM",'txt'=>'Duplicata Mercantil');
         $this->itau[2] = array('abr'=>"NP",'txt'=>'Nota PromissÃ³ria');
         $this->itau[3] = array('abr'=>"NS",'txt'=>'Nota de Seguro');
@@ -92,9 +92,7 @@ class Especie
         $this->itau[17] = array('abr'=>"CPS",'txt'=>'Conta de prestaÃ§Ã£o de serviÃ§o');
         $this->itau[18] = array('abr'=>"DBP",'txt'=>'Boleto de Proposta');
         $this->itau[99] = array('abr'=>"DIV",'txt'=>'Diversos');
-        
-        
-        
+
         $this->sicoob[1] = array('abr'=>"DM",'txt'=>'Duplicata Mercantil');
         $this->sicoob[2] = array('abr'=>"NP",'txt'=>'Nota PromissÃ³ria');
         $this->sicoob[3] = array('abr'=>"NS",'txt'=>'Nota de Seguro');
@@ -112,11 +110,24 @@ class Especie
         $this->sicoob[21] = array('abr'=>"ME",'txt'=>'Mensalidade escolar');
         $this->sicoob[22] = array('abr'=>"ME",'txt'=>'Parcela de ConsÃ³rcio');
         $this->sicoob[99] = array('abr'=>"DIV",'txt'=>'Outros');
-        
+
+        $this->santander[2] = array('abr'=>"DM",'txt'=>'Duplicata Mercantil');
+        $this->santander[4] = array('abr'=>"DS",'txt'=>'Duplicata de ServiÃ§o');
+        $this->santander[7] = array('abr'=>"LC",'txt'=>'Letra de CÃ¢mbio');
+        $this->santander[12] = array('abr'=>"NP",'txt'=>'Nota PromissÃ³ria');
+        $this->santander[13] = array('abr'=>"NPR",'txt'=>'Nota PromissÃ³ria Rural');
+        $this->santander[17] = array('abr'=>"RC",'txt'=>'Recibo');
+        $this->santander[20] = array('abr'=>"AP",'txt'=>'Apólice de Seguro');
+        $this->santander[30] = array('abr'=>"LC",'txt'=>'Letra de CÃ¢mbio');
+        $this->santander[32] = array('abr'=>"BDP",'txt'=>'Boleto de Proposta');
+        $this->santander[97] = array('abr'=>"CH",'txt'=>'Cheque');
+        $this->santander[98] = array('abr'=>"NP",'txt'=>'Nota PromissÃ³ria Direta');
+
         $this->res['104'] = $this->caixa;
         $this->res['341'] = $this->itau;
         $this->res['001'] = $this->bb;
         $this->res['756'] = $this->sicoob;
+        $this->res['033'] = $this->santander;
         
         $this->banco = $this->res[$banco];        
     } 

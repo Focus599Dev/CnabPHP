@@ -65,6 +65,11 @@ class Generico1 extends RegistroRemessaAbstract
         $this->data['numero_inscricao'] = $value == '' ? str_ireplace(array('.', '/', '-'), array(''), RemessaAbstract::$dados['numero_inscricao']) : str_ireplace(array('.', '/', '-'), array(''), $value);
     }
 
+    protected function set_numero_inscricao_empresa($value)
+    {
+        $this->data['numero_inscricao_empresa'] = str_ireplace(array('.', '/', '-'), array(''), $value);
+    }
+
     protected function set_codigo_beneficiario($value)
     {
         $this->data['codigo_beneficiario'] = $value == '' ? RemessaAbstract::$dados['codigo_beneficiario'] : $value;

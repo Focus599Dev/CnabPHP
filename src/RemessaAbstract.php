@@ -16,6 +16,7 @@ abstract class RemessaAbstract
         '237' => 'Bradesco',
         '341' => 'Itau',
         '756' => 'Sicoob',
+        '033' => 'Santander'
     ];
     /**
      * @var string
@@ -36,7 +37,7 @@ abstract class RemessaAbstract
     /**
      * @var int
      */
-    public static $loteContador = 1; // contador de lotes
+    public static $loteContador = 0; // contador de lotes
     /**
      * @var array
      */
@@ -59,7 +60,6 @@ abstract class RemessaAbstract
         self::$dados = $dados;
 
         $class = $this->register(self::$banco, self::$leiaute, 0);
-
         self::$cabecalho = new $class($dados);
         self::$filhos[] = self::$cabecalho;
     }
@@ -120,6 +120,8 @@ abstract class RemessaAbstract
      */
     public function adicionarLote(array $data)
     {
+        self::$loteContador++;
+
         if (strpos(self::$leiaute, '240')) {
             //$class = '\CnabPHP\Resources\\' . self::$banco . '\remessa\\' . self::$layout . '\Registro1';
             $class = $this->register(self::$banco, self::$leiaute, 1);
@@ -129,7 +131,6 @@ abstract class RemessaAbstract
         } else {
             $lote = $this;
         }
-        self::$loteContador++;
 
         return $lote;
     }
