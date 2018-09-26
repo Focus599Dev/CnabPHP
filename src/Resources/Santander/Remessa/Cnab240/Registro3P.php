@@ -357,6 +357,18 @@ class Registro3P extends Generico3
     }
 
     /**
+     * @param $value
+     */
+    protected function set_codigo_juros($value)
+	{
+		if ($value == 2) {
+			$this->meta['vlr_juros']['precision'] = 5;
+		}
+
+        $this->data['codigo_juros'] = $value;
+	}
+
+    /**
      * @param $num
      * @param int $base
      * @return int
