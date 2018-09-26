@@ -363,6 +363,7 @@ class Registro3P extends Generico3
 	{
 		if ($value == 2) {
 			$this->meta['vlr_juros']['precision'] = 5;
+            $this->meta['vlr_juros']['tamanho'] = 10;
 		}
 
         $this->data['codigo_juros'] = $value;
