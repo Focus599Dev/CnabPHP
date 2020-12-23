@@ -90,7 +90,7 @@ abstract class RegistroRetornoAbstract
                 case 'date':
                     if ($metaData['tamanho'] == 6) {
                         $data = \DateTime::createFromFormat('dmy', sprintf('%06d', $value));
-                        $retorno = $date->format('Y-m-d');
+                        $retorno = $data->format('Y-m-d');
                         $this->data[$name] = $retorno;
 
                     } elseif ($metaData['tamanho'] == 8) {
