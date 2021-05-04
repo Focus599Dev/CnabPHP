@@ -323,6 +323,11 @@ class Registro3P extends Generico3
 
 	public function inserirDetalhe($data)
 	{
+        //TIPO BAIXA SÓ RERTORNA SEGMENTO P
+	    if ($data['tipo_remessa'] === '2') {
+	        return;
+        }
+
 	    //SEGMENTOS OBRIGATÓRIOS (P, Q)
 		$class = 'CnabPHP\Resources\\'.RemessaAbstract::$banco.'\Remessa\\'.RemessaAbstract::$leiaute.'\Registro3Q';
 		$this->children[] = new $class($data);
