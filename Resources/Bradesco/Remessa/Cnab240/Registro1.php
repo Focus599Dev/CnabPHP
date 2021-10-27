@@ -22,167 +22,152 @@ class Registro1 extends Generico1
 		),
 		'registro' => array(
 			'tamanho'=> 1,
-			'default'=>'3',
+			'default'=>'1',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'num_registro' => array(
-			'tamanho'=> 5,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'segmento' => array(
+		'operacao' => array(
 			'tamanho'=> 1,
-			'default'=>'A',
+			'default'=>'C',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'movimento_tipo' => array(
-			'tamanho'=> 1,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'movimento_codigo' => array(
+		'servico' => array(
 			'tamanho'=> 2,
 			'default'=>'0',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'favorecido_camera' => array(
+		'forma_lancamento' => array(
+			'tamanho'=> 2,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'layout_lote' => array(
 			'tamanho'=> 3,
-			'default'=>'0',
+			'default'=>'045',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'favorecido_banco' => array(
-			'tamanho'=> 3,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'favorecido_conta_agencia_codigo' => array(
-			'tamanho'=> 5,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'favorecido_conta_agencia_dv' => array(
+		'branco01' => array(
 			'tamanho'=> 1,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'favorecido_conta_numero' => array(
+		'empresa_inscricao_tipo' => array(
+			'tamanho'=> 1,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'empresa_inscricao_numero' => array(
+			'tamanho'=> 14,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'empresa_convenio' => array(
+			'tamanho'=> 20,
+			'default'=>' ',
+			'tipo'=>'alfa',
+			'required'=>true
+		),
+		'empresa_agencia_codigo' => array(
+			'tamanho'=> 5,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'empresa_agencia_dv' => array(
+			'tamanho'=> 1,
+			'default'=>'0',
+			'tipo'=>'alfa',
+			'required'=>true
+		),
+		'empresa_conta_codigo' => array(
 			'tamanho'=> 12,
 			'default'=>'0',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'favorecido_conta_dv' => array(
+		'empresa_conta_dv' => array(
 			'tamanho'=> 1,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'favorecido_conta_agencia_dv' => array(
+		'empresa_conta_agencia_dv' => array(
 			'tamanho'=> 1,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'favorecido_nome' => array(
+		'empresa_nome' => array(
 			'tamanho'=> 30,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'credito_seu_numero' => array(
-			'tamanho'=> 20,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'credito_dh_pagamento' => array(
-			'tamanho'=> 8,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'credito_moeda_tipo' => array(
-			'tamanho'=> 3,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'credito_moeda_quantidade' => array(
-			'tamanho'=> 10,
-			'default'=>'0',
-			'tipo'=>'decimal',
-			'precision' => 2,
-			'required'=>true
-		),
-		'credito_valor' => array(
-			'tamanho'=> 13,
-			'default'=>'0',
-			'tipo'=>'decimal',
-			'precision' => 2,
-			'required'=>true
-		),
-		'credito_nosso_numero' => array(
-			'tamanho'=> 20,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'credito_data_real' => array(
-			'tamanho'=> 8,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'credito_valor_real' => array(
-			'tamanho'=> 13,
-			'default'=>'0',
-			'tipo'=>'decimal',
-			'precision' => 2,
-			'required'=>true
-		),
-		'informacoes2' => array(
+		'informacoes1' => array(
 			'tamanho'=> 40,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'codigo_finalidade_doc' => array(
-			'tamanho'=> 2,
+		'empresa_logadouro' => array(
+			'tamanho'=> 30,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'codigo_finalidade_ted' => array(
+		'empresa_numero' => array(
 			'tamanho'=> 5,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'empresa_complemento' => array(
+			'tamanho'=> 15,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'codigo_finalidade_complementar' => array(
-			'tamanho'=> 2,
+		'empresa_cidade' => array(
+			'tamanho'=> 20,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'cnab' => array(
+		'empresa_cep' => array(
+			'tamanho'=> 5,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'empresa_cep_complemento' => array(
 			'tamanho'=> 3,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'aviso' => array(
-			'tamanho'=> 1,
-			'default'=>'0',
+		'empresa_estado' => array(
+			'tamanho'=> 2,
+			'default'=>' ',
+			'tipo'=>'alfa',
+			'required'=>true
+		),
+		'indicativo_forma_pagamento' => array(
+			'tamanho'=> 2,
+			'default'=>'1',
 			'tipo'=>'int',
+			'required'=>true
+		),
+		'cnab' => array(
+			'tamanho'=> 6,
+			'default'=>' ',
+			'tipo'=>'alfa',
 			'required'=>true
 		),
 		'ocorrencias' => array(
@@ -203,9 +188,17 @@ class Registro1 extends Generico1
 
 	public function inserirDetalhe($data)
 	{
+		$class = 'CnabPHP\\Resources\\' . RemessaAbstract::$banco . '\\Remessa\\' . RemessaAbstract::$leiaute.'\\Registro3A';
+		
+		$this->children[] = new $class($data);
+
 		$class = 'CnabPHP\\Resources\\' . RemessaAbstract::$banco . '\\Remessa\\' . RemessaAbstract::$leiaute.'\\Registro3B';
 		
 		$this->children[] = new $class($data);
+
+		$class = 'CnabPHP\\Resources\\' . RemessaAbstract::$banco . '\\Remessa\\' . RemessaAbstract::$leiaute.'\\Registro5';
+		
+		$this->children[] = new $class();
  	}
 
 }

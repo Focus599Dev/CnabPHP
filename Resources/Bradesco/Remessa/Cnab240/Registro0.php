@@ -2,6 +2,7 @@
 
 namespace CnabPHP\Resources\Bradesco\Remessa\Cnab240;
 
+use CnabPHP\RemessaAbstract;
 use \CnabPHP\Resources\Generico\Remessa\Cnab240\Generico0;
 
 class Registro0 extends Generico0
@@ -21,36 +22,12 @@ class Registro0 extends Generico0
 		),
 		'registro' => array(
 			'tamanho'=> 1,
-			'default'=>'1',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'operacao' => array(
-			'tamanho'=> 1,
-			'default'=>'C',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'servico' => array(
-			'tamanho'=> 2,
 			'default'=>'0',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'forma_lancamento' => array(
-			'tamanho'=> 2,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'layout_lote' => array(
-			'tamanho'=> 3,
-			'default'=>'045',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'branco01' => array(
-			'tamanho'=> 1,
+		'cnab' => array(
+			'tamanho'=> 9,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
@@ -109,68 +86,68 @@ class Registro0 extends Generico0
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'informacoes1' => array(
-			'tamanho'=> 40,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'empresa_logadouro' => array(
+		'nome_banco' => array(
 			'tamanho'=> 30,
+			'default'=>'Bradesco S A',
+			'tipo'=>'alfa',
+			'required'=>true
+		),
+		'cnab2' => array(
+			'tamanho'=> 10,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'empresa_numero' => array(
-			'tamanho'=> 5,
+		'arquivo_codigo' => array(
+			'tamanho'=> 1,
 			'default'=>'0',
 			'tipo'=>'int',
 			'required'=>true
 		),
-		'empresa_complemento' => array(
-			'tamanho'=> 15,
-			'default'=>' ',
-			'tipo'=>'alfa',
+		'arquivo_dh_geracao' => array(
+			'tamanho'=> 8,
+			'default'=>'0',
+			'tipo'=>'int',
 			'required'=>true
 		),
-		'empresa_cidade' => array(
+		'arquivo_tm_geracao' => array(
+			'tamanho'=> 6,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'arquivo_sequencia' => array(
+			'tamanho'=> 6,
+			'default'=>'0',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'arquivo_layout' => array(
+			'tamanho'=> 3,
+			'default'=>'089',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'arquivo_densidade' => array(
+			'tamanho'=> 5,
+			'default'=>'1600',
+			'tipo'=>'int',
+			'required'=>true
+		),
+		'reserva_banco' => array(
 			'tamanho'=> 20,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'empresa_cep' => array(
-			'tamanho'=> 5,
-			'default'=>'0',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'empresa_cep_complemento' => array(
-			'tamanho'=> 3,
+		'reserva_empresa' => array(
+			'tamanho'=> 20,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true
 		),
-		'empresa_estado' => array(
-			'tamanho'=> 2,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'indicativo_forma_pagamento' => array(
-			'tamanho'=> 2,
-			'default'=>'1',
-			'tipo'=>'int',
-			'required'=>true
-		),
-		'cnab' => array(
-			'tamanho'=> 6,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true
-		),
-		'ocorrencias' => array(
-			'tamanho'=> 10,
+		'cnab3' => array(
+			'tamanho'=> 29,
 			'default'=>' ',
 			'tipo'=>'alfa',
 			'required'=>true

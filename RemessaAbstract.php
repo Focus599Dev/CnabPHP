@@ -163,7 +163,7 @@ abstract class RemessaAbstract
         /** @var RegistroRemessaAbstract $header */
         $header = new $class(['1' => 1]);
         $header->getArquivo();
-        return implode("\r\n", self::$retorno) . "\r\n";
+        return implode("\r\n", self::$retorno);
     }
 
 	public static function getFilhos(){

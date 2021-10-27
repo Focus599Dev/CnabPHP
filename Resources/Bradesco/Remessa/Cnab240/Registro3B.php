@@ -28,7 +28,7 @@ class Registro3B extends RegistroRemessaAbstract
 		),
 		'num_registro' => array(
 			'tamanho'=> 5,
-			'default'=>'0',
+			'default'=>'2',
 			'tipo'=>'int',
 			'required'=>true
 		),
@@ -165,10 +165,20 @@ class Registro3B extends RegistroRemessaAbstract
 		),
 		'identificação_banco_spb' => array(
 			'tamanho'=> 8,
-			'default'=>'0',
-			'tipo'=>'int',
+			'default'=> ' ',
+			'tipo'=>'alfa',
 			'required'=>true
 		),
 	);
 
+	protected function get_num_registro(){
+
+		self::$num_sequencia += 1;
+
+		$this->data['num_registro'] = self::$num_sequencia;
+		
+		$this->data['num_registro'] = $this->___get('num_registro');
+		
+		return $this->data['num_registro'];
+	}
 }

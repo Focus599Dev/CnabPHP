@@ -46,6 +46,8 @@ abstract class RegistroRemessaAbstract
      */
     protected $children;
 
+    public static $num_sequencia = 0;
+
     /**
      * RegistroRemessaAbstract constructor.
      * @param null $data
