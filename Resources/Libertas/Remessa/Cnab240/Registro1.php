@@ -7,7 +7,7 @@ use \CnabPHP\Resources\Generico\Remessa\Cnab240\Generico1;
 class Registro1 extends Generico1
 {
 
-    protected static $num_sequencia = 1;
+    public static $num_sequencia = 1;
 
 	protected $meta = array(
 		'ind_registro'=>
@@ -112,13 +112,13 @@ class Registro1 extends Generico1
 			array(
 				'tamanho'=> 10,
 				'default'=> '0',
-				'tipo'=>'decimal',
-				'precision'=> 2,
+				'tipo'=>'int',
+				'precision'=> 0,
 				'required'=>true
 			),
 		'cond_emi_pape_cobranca'=>
 			array(
-				'tamanho'=> 9,
+				'tamanho'=> 1,
 				'default'=> ' ',
 				'tipo'=>'alfa',
 				'required'=>true
@@ -133,8 +133,8 @@ class Registro1 extends Generico1
 		'data_liquidacao'=>
 			array(
 				'tamanho'=> 6,
-				'default'=> '000000',
-				'tipo'=>'date',
+				'default'=> '0',
+				'tipo'=>'int',
 				'required'=> true
 			),
 		'iden_operacao_banco'=>
@@ -145,13 +145,6 @@ class Registro1 extends Generico1
 				'required'=>true
 			),
 		'indi_rateio_credito'=>
-			array(
-				'tamanho'=> 1,
-				'default'=> ' ',
-				'tipo'=>'alfa',
-				'required'=>true
-			),
-		'ende_aviso_debito'=>
 			array(
 				'tamanho'=> 1,
 				'default'=> ' ',
@@ -189,16 +182,16 @@ class Registro1 extends Generico1
 		'data_vencimento_titulo'=>
 			array(
 				'tamanho'=> 6,
-				'default'=> '000000',
-				'tipo'=>'date',
+				'default'=> '0',
+				'tipo'=>'int',
 				'required'=>true
 			),
 		'valor_titulo'=>
 			array(
 				'tamanho'=> 13,
 				'default'=> '0',
-				'tipo'=>'decimal',
-				'precision' => 2,
+				'tipo'=>'int',
+				'precision' => 0,
 				'required'=>true
 			),
 		'banco_encarregado_cobranca'=>
@@ -232,8 +225,8 @@ class Registro1 extends Generico1
 		'data_emissao_titulo'=>
 			array(
 				'tamanho'=> 6,
-				'default'=> '000000',
-				'tipo'=>'date',
+				'default'=> '0',
+				'tipo'=>'int',
 				'required'=>true
 			),
 		'instrucao1'=>
@@ -259,14 +252,14 @@ class Registro1 extends Generico1
 			),
 		'zeros04'=>
 			array(
-				'tamanho'=> 14,
+				'tamanho'=> 12,
 				'default'=> '0',
 				'tipo'=>'int',
 				'required'=>true
 			),
 		'numero_termo_cessao'=>
 			array(
-				'tamanho'=> 9,
+				'tamanho'=> 19,
 				'default'=> ' ',
 				'tipo'=>'alfa',
 				'required'=>true
@@ -275,16 +268,16 @@ class Registro1 extends Generico1
 			array(
 				'tamanho'=> 13,
 				'default'=> '0',
-				'tipo'=>'decimal',
-				'precision' => 2,
+				'tipo'=>'int',
+				'precision' => 0,
 				'required'=>true
 			),
 		'valor_abatimento'=>
 			array(
 				'tamanho'=> 13,
 				'default'=> '0',
-				'tipo'=>'decimal',
-				'precision' => 2,
+				'tipo'=>'int',
+				'precision' => 0,
 				'required'=>true
 			),
 		'ident_tipo_inscri_sacado'=>

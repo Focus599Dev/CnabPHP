@@ -2,7 +2,7 @@
 
 namespace CnabPHP\Resources\Libertas\Remessa\Cnab240;
 
-use \CnabPHP\Resources\Generico\Remessa\Cnab240\Generico0;
+use CnabPHP\Resources\Generico\Remessa\Cnab240\Generico0;
 
 class Registro0 extends Generico0
 {
@@ -74,13 +74,13 @@ class Registro0 extends Generico0
 			array(
 				'tamanho' => 6,
 				'default' => '211021',
-				'tipo'=> 'date',
+				'tipo'=> 'int',
 				'required'=> true
 			),
 		'branco01' => 
 			array(
 				'tamanho'=> 8,
-				'default'=>'0',
+				'default'=>' ',
 				'tipo'=>'alfa',
 				'required'=>true
 			),
