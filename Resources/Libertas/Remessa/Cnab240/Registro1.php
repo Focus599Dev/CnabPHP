@@ -41,28 +41,28 @@ class Registro1 extends Generico1
 		'modalidade_operacao'=>
 			array(
 				'tamanho'=> 4,
-				'default'=>'0',
+				'default'=>'0301',
 				'tipo'=>'int',
 				'required'=>true
 			),
 		'natureza_operacao'=>
 			array(
 				'tamanho'=> 2,
-				'default'=>'0',
+				'default'=>'1',
 				'tipo'=>'int',
 				'required'=>true
 			),
 		'origigem_recurso'=>
 			array(
 				'tamanho'=> 4,
-				'default'=>'0',
+				'default'=>'0101',
 				'tipo'=>'int',
 				'required'=>true
 			),
 		'classe_risco'=>
 			array(
 				'tamanho'=> 2,
-				'default'=>' ',
+				'default'=>'H',
 				'tipo'=>'alfa',
 				'required'=>true
 			),
