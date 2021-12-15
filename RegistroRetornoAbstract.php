@@ -198,4 +198,8 @@ abstract class RegistroRetornoAbstract
         return $this->children[$index];
     }
 
+	public function getData(){
+		return $this->data;
+	}
+
 }

@@ -17,7 +17,8 @@ abstract class RemessaAbstract
         '341' => 'Itau',
         '756' => 'Sicoob',
         '033' => 'Santander',
-		'001' => 'Libertas'
+		'001' => 'Libertas',
+		'002' => 'Qcertifica'
     ];
     /**
      * @var string
@@ -163,7 +164,11 @@ abstract class RemessaAbstract
         /** @var RegistroRemessaAbstract $header */
         $header = new $class(['1' => 1]);
         $header->getArquivo();
-        return implode("\r\n", self::$retorno);
+		$retorno = self::$retorno;
+		
+		self::$retorno = array();
+		
+        return implode("\r\n", $retorno);
     }
 
 	public static function getFilhos(){

@@ -22,9 +22,12 @@ abstract class RetornoAbstract
 	*/
 
 	public function __construct($conteudo){
-
 		$conteudo = str_replace("\r\n", "\n", $conteudo);
+		
 		$lines = explode("\n", $conteudo);
+
+		$lines = $this->checkEmptyLines($lines);
+
 		if (count($lines) < 2) {
 			throw new Exception("Arquivo sem Conteudo");
 		}
@@ -46,16 +49,57 @@ abstract class RetornoAbstract
 		{
 			throw new Exception("Não foi possivel detectar o tipo do arquivo, provavelmente esta corrompido");
 		}
+
 		if($codigo_tipo == '1'){
 			throw new Exception("Esse é um arqvuio de remessa, nao pode ser processado aqui.");
 		}
+
 		self::$banco = "B".$codigo_banco;
+		
 		self::$layout = "L".$layout_versao;
-		$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro0';
-		self::$lines = $lines; 
-		$this->children[] = new $class($lines[0]);
-		$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro9';
-		$this->children[] = new $class($lines[count($lines)-2]);
+
+		if ($length == 240){
+
+			$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro0';
+			
+			self::$lines = $lines; 
+			
+			$this->children[] = new $class($lines[0]);
+
+			for($i = 2 ; $i  <= (count($lines) - 3); $i++){
+
+				$registro = substr($lines[$i], 7, 1);
+	
+				$operação = substr($lines[$i], 13, 1);
+				
+				$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro' . $registro . $operação;
+			
+				$this->children[] = new $class($lines[$i]);
+			}
+
+			$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro5';
+			
+			$this->children[] = new $class($lines[count($lines)-2]);
+			
+			$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro9';
+			
+			$this->children[] = new $class($lines[count($lines)-1]);
+			
+
+		} else if ($length == 400 || $length == 444){
+
+			$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro0';
+			
+			self::$lines = $lines; 
+			
+			$this->children[] = new $class($lines[0]);
+			
+			$class = 'CnabPHP\Resources\\'.self::$banco.'\retorno\\'.self::$layout.'\Registro9';
+			
+			$this->children[] = new $class($lines[count($lines)-2]);
+
+		}
+
 	}
 	/*
 	* m?todo changeLayout()
@@ -73,8 +117,13 @@ abstract class RetornoAbstract
 	*/
 	public function getRegistros($lote = 1)
 	{
-		$arquivo = $this->children[0];
-		return $arquivo->getRegistros($lote);
+		$data = array();
+
+		foreach($this->children as $line){
+			$data[] = $line->getData();
+		}
+
+		return $data;
 	}	
 	/*
 	* método getChilds()
@@ -95,6 +144,20 @@ abstract class RetornoAbstract
 		 $arquivo = $this->children[0];   
 		 return (self::$layout!='L400')?$arquivo->versao_layout:'L400';
          
+	}
+
+	private function checkEmptyLines($lines){
+
+		$data = array();
+
+		foreach($lines as $line){
+			if (trim($line)){
+
+				$data[] = $line;
+			}
+		}
+
+		return $data;
 	}
 }
 ?>
